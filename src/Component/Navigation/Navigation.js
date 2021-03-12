@@ -38,6 +38,7 @@ const Navigation = () => {
         <div>
           <Link to="/reqTutor">Request For a Tutor</Link>
           <Link to="/tuition-job">Tuition Jobs</Link>
+          <Link to="/blog">Blog</Link>
           <Link to="/subject/all">All Tutor</Link>
           {user ? (
             <Link onClick={handleSignOut}>Log Out</Link>
@@ -75,6 +76,7 @@ const Navigation = () => {
       <div className="for_mobile">
         <Link to="/reqTutor">Request For a Tutor</Link>
         <Link to="/tuition-job">Tuition Jobs</Link>
+        <Link to="/blog">Blog</Link>
         <Link to="/subject/all">All Tutor</Link>
         {user ? (
           <Link onClick={() => hamburger("out")}>Log Out</Link>

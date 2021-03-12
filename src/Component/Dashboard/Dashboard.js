@@ -43,13 +43,13 @@ const Dashboard = () => {
     }
   };
   const handleDelete = (id) => {
-    const newArr = jobs.filter((x) => x._id !== id);
-    setJobs(newArr);
-    fetch(`https://calm-shore-19939.herokuapp.com/delete/jobs/${id}`, {
-      method: "DELETE",
-    })
-      .then((response) => response.text())
-      .then((json) => console.log(json));
+    // const newArr = jobs.filter((x) => x._id !== id);
+    // setJobs(newArr);
+    // fetch(`https://calm-shore-19939.herokuapp.com/delete/jobs/${id}`, {
+    //   method: "DELETE",
+    // })
+    //   .then((response) => response.text())
+    //   .then((json) => console.log(json));
   };
   return (
     <div className="dashboard">
