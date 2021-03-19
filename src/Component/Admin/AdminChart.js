@@ -1,9 +1,22 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Bar } from "react-chartjs-2";
+import { JobsContext } from "../Context/Jobs_Context";
+import { TeacherContext } from "../Context/TeacherList_Context";
 
 const AdminChart = () => {
   const [data1, setData1] = useState([]);
-  const [data2, setData2] = useState([1, 2]);
+  const [data2, setData2] = useState([]);
+  const [jobs, setJobs] = useContext(JobsContext);
+  const [teacher, setTeacher] = useContext(TeacherContext);
+
+  useEffect(() => {
+    setData1([2, 3, teacher.length - 5]);
+  }, [teacher]);
+
+  useEffect(() => {
+    setData2([1, 2, jobs.length - 3]);
+  }, [jobs]);
+
   const data = {
     labels: [
       "Jan",
@@ -27,7 +40,7 @@ const AdminChart = () => {
         borderWidth: 1,
         hoverBackgroundColor: "rgba(255,99,132,0.4)",
         hoverBorderColor: "rgba(255,99,132,1)",
-        data: [1, 6, 9, 1, 7, 9, 1],
+        data: data1,
       },
       {
         label: "Jobs",

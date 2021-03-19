@@ -70,7 +70,7 @@ const AdminDashboard = () => {
             {jobs
               .slice(0)
               .reverse()
-              .slice(0, view)
+              .slice(0, viewJob)
               .map((x, index) => (
                 <div className="adminDashboard__card_jobs">
                   <div>
@@ -117,7 +117,7 @@ const AdminDashboard = () => {
             <Button
               variant="contained"
               color="primary"
-              onClick={() => setView(viewJob + 2)}
+              onClick={() => setViewJob(viewJob + 2)}
             >
               VIEW MORE
             </Button>

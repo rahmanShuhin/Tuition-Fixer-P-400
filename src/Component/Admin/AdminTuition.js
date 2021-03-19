@@ -1,11 +1,13 @@
 import React from "react";
 import DashTable from "../Dashboard/DashTable";
 import "./AdminTuition.css";
-const AdminTuition = ({ allTuition, setAllTuition }) => {
+const AdminTuition = ({ allTuition, setAllTuition, handleSnack }) => {
   console.log(allTuition);
   const handleDelete = (id) => {
     const newArr = allTuition.filter((x) => x._id !== id);
     setAllTuition(newArr);
+    handleSnack("Tuition Job Deleted Successfully");
+    alert("Deleted Successfully");
     fetch(`https://calm-shore-19939.herokuapp.com/delete/jobs/${id}`, {
       method: "DELETE",
     })

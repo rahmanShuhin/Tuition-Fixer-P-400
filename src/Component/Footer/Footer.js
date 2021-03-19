@@ -4,6 +4,7 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="footer-distributed">
@@ -13,8 +14,9 @@ const Footer = () => {
         </h3>
 
         <p className="footer-links">
-          <a href="#">Home</a>·<a href="#">Blog</a>·
-          <a href="#">Privacy Policy</a>·<a href="#">About Us</a>
+          <Link to="/">Home</Link>·<Link to="/blog">Blog</Link>·
+          <a href="/home/#contact">Contact Us</a>·
+          <Link to="/about">About Us</Link>
         </p>
 
         <p className="footer-company-name">TutionFixer.com &copy; 2020</p>
@@ -35,7 +37,7 @@ const Footer = () => {
         <div>
           <i className="fa fa-envelope"></i>
           <p>
-            <a href="mailto:info@tutionfixer.com">info@tutionfixer.com</a>
+            <a href="mailto:suhin4000@gmail.com">info@tutionfixer.com</a>
           </p>
         </div>
       </div>

@@ -7,10 +7,12 @@ export const Sign_In_Context = (props) => {
   useEffect(() => {
     auth.onAuthStateChanged(function (usr) {
       if (usr) {
-        const { email } = usr;
+        console.log(usr);
+        const { email, emailVerified } = usr;
         const updateUser = {
           isSignIn: true,
           email: email,
+          emailVerified,
         };
         setUser(updateUser);
       } else {

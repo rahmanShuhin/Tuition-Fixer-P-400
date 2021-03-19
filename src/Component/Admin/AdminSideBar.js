@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./AdminSideBar.css";
 import WorkIcon from "@material-ui/icons/Work";
@@ -6,7 +6,20 @@ import DashboardIcon from "@material-ui/icons/Dashboard";
 import ContactPhoneIcon from "@material-ui/icons/ContactPhone";
 import CreateIcon from "@material-ui/icons/Create";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import { auth } from "../FirebaseConfig";
+import { UserContext } from "../Context/Sign_In_Context";
 const AdminSideBar = ({ step, setStep }) => {
+  const [user, setUser] = useContext(UserContext);
+  const handleSignOut = () => {
+    auth
+      .signOut()
+      .then(function () {
+        setUser(null);
+      })
+      .catch(function (error) {
+        alert("There is Something Wrong");
+      });
+  };
   return (
     <div className="adminSideBar">
       <div className="adminSideBar__link">
@@ -45,10 +58,7 @@ const AdminSideBar = ({ step, setStep }) => {
           <CreateIcon></CreateIcon>
           Blog Post
         </div>
-        <div
-          className={step === 5 && "active_admin"}
-          onClick={() => setStep(5)}
-        >
+        <div onClick={handleSignOut}>
           <ExitToAppIcon></ExitToAppIcon>
           Sign Out
         </div>

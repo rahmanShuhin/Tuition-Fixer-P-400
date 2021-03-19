@@ -64,6 +64,7 @@ const BlogPost = () => {
   };
 
   const handleSnack = (msg) => {
+    setOpen(true);
     setSnack(msg);
   };
   const handleSnackClose = () => {

@@ -6,6 +6,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import MuiAlert from "@material-ui/lab/Alert";
 import "./Feature.css";
 import { useState } from "react";
+import Fab from "@material-ui/core/Fab";
+
+import CloseIcon from "@material-ui/icons/Close";
 const useStyles = makeStyles((theme) => ({
   large: {
     width: theme.spacing(30),
@@ -71,16 +74,19 @@ const Feature = () => {
           <div className="modal">
             <div>
               <div>
-                <Link t0="/">
+                <Link to="/">
                   {" "}
-                  <i>tuition fixer</i>
+                  <h2 style={{ fontSize: "35px" }}>Tuition Fixer</h2>
                 </Link>
                 <h3>
                   <i>Thanks For Your Interest</i>
                 </h3>
               </div>
             </div>
-            <div>
+            <div className="close__modal__boss">
+              <span className="close__modal" onClick={handleClose}>
+                <CloseIcon></CloseIcon>
+              </span>
               <ContactForm
                 contact={contact}
                 handleClose={handleClose}

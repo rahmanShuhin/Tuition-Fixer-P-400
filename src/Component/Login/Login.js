@@ -24,10 +24,11 @@ const Login = () => {
       .then(function (res) {
         if (res) {
           console.log(res);
-          const { email } = res.user;
+          const { email, emailVerified } = res.user;
           const updateUser = {
             isSignIn: true,
             email: email,
+            emailVerified,
           };
           setUser(updateUser);
           history.push("/my-profile");

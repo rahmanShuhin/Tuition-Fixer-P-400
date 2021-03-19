@@ -106,6 +106,7 @@
   color: white;
   display: grid;
   place-items: center;
+  padding: 10px;
 }
 
 .verified_user > h4 {
@@ -126,6 +127,15 @@
 }
 .payPal_box > h4 {
   margin-bottom: 10px;
+}
+@media only screen and (max-width: 1500px) {
+  .modal {
+    width: 95%;
+    min-height: 50vh;
+    outline: none;
+    display: grid;
+    grid-template-columns: 30% 70%;
+  }
 }
 @media only screen and (max-width: 1200px) {
   .profile {
@@ -166,5 +176,14 @@
   }
   .profileBottom > div > h3 {
     margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .modal > div:nth-child(1) h2 {
+    font-size: 30px !important;
+  }
+  .modal > div:nth-child(1) h3 {
+    font-size: 15px !important;
   }
 }

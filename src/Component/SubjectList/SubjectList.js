@@ -18,16 +18,16 @@ const SubjectList = () => {
           <h3>Science Tutors</h3>
           <ul>
             <li>
-              <Link>Physics Tutors</Link>
+              <Link to="/subject/physics">Physics Tutors</Link>
             </li>
             <li>
-              <Link>Chemistry Tutors</Link>
+              <Link to="/subject/chemistry">Chemistry Tutors</Link>
             </li>
             <li>
-              <Link>Higher Math Tutors</Link>
+              <Link to="/subject/math">Higher Math Tutors</Link>
             </li>
             <li>
-              <Link>Biology Tutors</Link>
+              <Link to="/subject/biology">Biology Tutors</Link>
             </li>
           </ul>
         </div>
@@ -35,13 +35,13 @@ const SubjectList = () => {
           <h3>Humanities Tutors</h3>
           <ul>
             <li>
-              <Link>HistoryTutors</Link>
+              <Link to="/subject/history">HistoryTutors</Link>
             </li>
             <li>
-              <Link>English Tutors</Link>
+              <Link to="/subject/english">English Tutors</Link>
             </li>
             <li>
-              <Link>Geology Tutors</Link>
+              <Link to="/subject/geology">Geology Tutors</Link>
             </li>
           </ul>
         </div>
@@ -49,16 +49,16 @@ const SubjectList = () => {
           <h3>Business Tutors</h3>
           <ul>
             <li>
-              <Link>Economics Tutors</Link>
+              <Link to="/subject/economics">Economics Tutors</Link>
             </li>
             <li>
-              <Link>Accounting Tutors</Link>
+              <Link to="/subject/accounting">Accounting Tutors</Link>
             </li>
             <li>
-              <Link>Marketing Tutors</Link>
+              <Link to="/subject/marketing">Marketing Tutors</Link>
             </li>
             <li>
-              <Link>Finance Tutors</Link>
+              <Link to="/subject/finance">Finance Tutors</Link>
             </li>
           </ul>
         </div>
